@@ -1,0 +1,95 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #f0f0f0;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Main Game Box */
+.mainbox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Each Row */
+.firstline, .secondline {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Button Styling */
+.btn {
+    height: 180px;
+    width: 180px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+    transition: transform 0.15s ease, box-shadow 0.3s ease;
+    user-select: none; /*this does not allow user to select text*/
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Colors */
+.red {
+    background: linear-gradient(145deg, #ff4b2b, #ff416c);
+}
+.yellow {
+    background: linear-gradient(145deg, #f7c562, #fcb41a);
+}
+.orange {
+    background: linear-gradient(145deg, #f78a2c, #ff712f);
+}
+.green {
+    background: linear-gradient(145deg, #56ab2f, #a8e063);
+}
+
+/* Flash Effect */
+.flash {
+    background: white !important;
+    box-shadow: 0 0 30px white;
+}
+
+/* Game Over Red Flash */
+.redflash {
+    animation: redBlink 0.3s ease forwards;
+}
+
+@keyframes redBlink {
+    0% { background: #ff4b2b; }
+    100% { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
+}
